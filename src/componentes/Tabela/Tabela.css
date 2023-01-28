@@ -1,0 +1,45 @@
+.section-content {
+    box-sizing: border-box;
+    outline: 0;
+    max-width: 640px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: black;
+    border-radius: 10px;
+
+}
+
+.tabela-content {
+    display: flex;
+}
+
+.tabela-content form{
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+    color: white;
+}
+
+.text-field{
+    display: block;
+    color: aliceblue;
+    padding: 10px;
+    text-align: center;
+}
+
+.text-field label{
+    display: block;
+    text-align: left;
+    padding: 10px;
+    padding-left: 55px;
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+
+.text-field input{
+    height: 20px;
+    border: none;
+    width: 80%;
+}
