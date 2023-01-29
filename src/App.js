@@ -22,7 +22,8 @@ function App(props) {
   const mensagensPost = () => {
     return (
       <>
-        {lista.map((valor) => <CaixaDeMensagem
+        {lista.map((valor, index) => <CaixaDeMensagem
+          key={index}
           peso={valor.peso}
           altura={valor.altura}
           resultado={valor.resultado}
