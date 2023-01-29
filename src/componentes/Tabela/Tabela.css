@@ -3,14 +3,14 @@
     outline: 0;
     max-width: 640px;
     margin: auto;
-    margin-top: 50px;
-    background-color: black;
     border-radius: 10px;
 
 }
 
 .tabela-content {
     display: flex;
+    background-color: #E0A946;
+    border-radius: 10px;
 }
 
 .tabela-content form{
@@ -19,17 +19,24 @@
     font-size: 20px;
     text-align: left;
     padding: 10px;
-    color: white;
+    color: #5E0894;
 }
 
 .text-field{
     display: block;
-    color: aliceblue;
+    color: #5E0894;
     padding: 10px;
     text-align: center;
+    margin: 10px;
 }
 
 .text-field label{
+    color: #5E0894;
+}
+
+
+.text-field label{
+    padding-top: 10px;
     display: block;
     text-align: left;
     padding: 10px;
@@ -42,4 +49,21 @@
     height: 20px;
     border: none;
     width: 80%;
+}
+
+.text-field input {
+    display: block;
+    margin: auto;
+}
+
+.text-field input:focus{
+    background-color: #E0A946;
+}
+
+.text-field button{
+    background-color: #9C2FE0;
+}
+
+.text-field button:hover{
+    background-color: #E0A946;
 }

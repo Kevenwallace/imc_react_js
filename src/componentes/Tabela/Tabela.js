@@ -1,11 +1,11 @@
 import { useState } from "react"
-import isValid from "../../models/validacao"
-
 import CaixaDeTexto from "../CaixaDeTexto"
-import ItensTabela from "../ItensTabela/ItensTabela"
+import ItensTabela from "../ItensTabela"
 import "./Tabela.css"
 
 const Tabela = (props) => {
+    
+
     const pesos = [
         'menos do que 18.5',
         'entre 18.5 e 24,9',
@@ -15,35 +15,27 @@ const Tabela = (props) => {
         'main de 40',
       ]
       const imcs = [
-        'abaixo do peso',
-        'peso normal',
-        'sobrepeso',
-        'obesidade grau 1',
-        'obesidade grau 2',
-        'obesidade grau 3',
-      ]
+        'Déficit de peso',
+        'Peso normal',
+        'Sobrepeso',
+        'Obesidade grau 1',
+        'Obesidade grau 2',
+        'Obesidade grau 3']
 
     const [peso, setPeso] = useState()
     const [altura, setAltura] = useState()
-    const [lista, setLista] = useState([])
+    
    
+   
+
     const aoSalvar = (event) => {
         event.preventDefault();
-        setLista([...lista,{
+        props.handleSave({
             peso,
             altura,
-        }])
-        validacao(lista)
-        
-    }
-
-
-    const validacao = (lista) => {
-        lista.map((objeto) => isValid(objeto))
-    }
+        })}    
     
-   
-    
+
 
     return(
         <section className="section-content">
@@ -60,10 +52,12 @@ const Tabela = (props) => {
             </div>
             <div className="text-field">
                 <form onSubmit={(event) => aoSalvar(event)}>
-                    <CaixaDeTexto label="seu peso" placeholder="digite seu peso" aoMudar={(event) => setPeso(event)} />
-                    <CaixaDeTexto label="sua altura" placeholder="digite sua altura" aoMudar={(event) => setAltura(event)}/>
+                    <CaixaDeTexto label="seu peso" placeholder="digite seu peso[AVISO: USE 'PONTO' NO LUGAR DE 'VIRGULA']" aoMudar={(event) => setPeso(event)} />
+                    <CaixaDeTexto label="sua altura" placeholder="digite sua altura[AVISO: USE 'PONTO' NO LUGAR DE 'VIRGULA']" aoMudar={(event) => setAltura(event)}/>
                     <button>enviar</button>
+                    
                 </form>
+
             </div>
             
         </section>

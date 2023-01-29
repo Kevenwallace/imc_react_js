@@ -1,5 +1,7 @@
 const isValid = (objeto) => {
     let number = 0;
+    let altura = objeto['altura']
+    let peso = objeto['peso']
     let resultado = objeto['peso'] / (objeto['altura'] * objeto['altura']);
     if (resultado < 18.5){
         number = 1
@@ -16,7 +18,13 @@ const isValid = (objeto) => {
     }else {
         number = 7
     };
-    console.log(number)
+    
+    return {
+        altura,
+        peso,
+        resultado,
+        number,
+    }
 };
 
 
