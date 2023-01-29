@@ -1,5 +1,5 @@
 import Tabela from "./componentes/Tabela";
-import "./app.css"
+import "./App.css"
 import isValid from "./models/validacao"
 import CaixaDeMensagem from "./componentes/CaixaDeMensagem";
 import { useState } from "react";
